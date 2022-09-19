@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block web_title %}
+過去分詞形練習
+{% endblock %}
+
+{% block meta_data %}
+<meta id="p_or_pp" content="pp">
+<meta id="test_or_practice" content="practice">
+{% for verb in v_list %}
+<meta class="q_list" content="{{ verb }}">
+{% endfor %}
+{% endblock %}
+
+{% block test_or_practice %}
+practice
+{% endblock %}
+
+{% block p_or_pp %}
+過去分詞形練習
+{% endblock %}

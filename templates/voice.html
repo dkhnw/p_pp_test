@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>英語の音声確認サイト</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/voice.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/round_btn.css') }}">
+</head>
+
+<body>
+	<div class="header">
+		<div class="return_title">
+			<a href="/p_pp_test" role="button" class="round_btn"></a>
+		</div>
+		<br>
+		<div class="header_name">
+			英語の音声確認画面
+		</div>
+	</div>
+	<div>
+		<p>英単語・英文を入力してください。</p>
+		<input type="text" id="word" value="Hello world!">
+		<br>
+		<p id="check" class="msr_btn04" onclick="pronounce()">
+			<a>発音を確認</a>
+		</p>
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/voice.js') }}"></script>
+</body>
+
+</html>

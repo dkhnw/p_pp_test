@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>過去形・過去分詞形テスト　トップページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+    <div class="header">
+        <img class="school_logo" src="{{ url_for('static', filename='img/covez_logo.png') }}" alt="城南コベッツ">
+        <p class="school_name">赤羽南教室</p>
+    </div>
+    <div class="link_list">
+        <p class="msr_btn04">
+            <a class="round_btn" href="/p_pp_test/create_p_practice">過去形練習</a>
+        </p>
+        <p class="msr_btn04">
+            <a class="round_btn" href="/p_pp_test/create_p_test">過去形テスト</a>
+        </p>
+        <p class="msr_btn04">
+            <a class="round_btn" href="/p_pp_test/create_pp_practice">過去分詞形練習</a>
+        </p>
+        <p class="msr_btn04">
+            <a class="round_btn" href="/p_pp_test/create_pp_test">過去分詞形テスト</a>
+        </p>
+        <p class="msr_btn04">
+            <a class="round_btn" href="/p_pp_test/voice">英語の音声確認</a>
+        </p>
+        <p class="msr_btn04">
+            <a class="round_btn" href="/p_pp_test/qanavi">Q&A</a>
+        </p>
+    </div>
+</body>
+
+</html>

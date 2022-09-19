@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/create_questions.js') }}"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/qanavi.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/round_btn.css') }}">
+</head>
+
+<body>
+	<div class="header">
+		<div class="return_title">
+			<a href="/p_pp_test" role="button" class="round_btn"></a>
+		</div>
+		<br>
+		<div class="header_name">
+			Q&A
+		</div>
+	</div>
+
+	<form action="" name="question_form">
+		<div class="accordion">
+			<div class="q_title">
+				Q1.アプリについて
+			</div>
+			<div class="m-hdg Lv1">
+				<!-- no1-1 -->
+				<div class="option">
+					<input type="checkbox" id="no1-1" class="toggle">
+					<label class="title no1_label" for="no1-1">Q1-1.過去形・過去分詞形テストアプリとは何ですか。</label>
+					<div class="content">
+						中学・高校英語で暗記必須の動詞の過去形・過去分詞形を覚えることができるアプリです。本アプリでは音声機能を使用した読み上げ機能もあるため、単語の発音も確認することができます。
+					</div>
+				</div>
+				<!-- no1-2 -->
+				<div class="option">
+					<input type="checkbox" id="no1-2" class="toggle">
+					<label class="title no1_label" for="no1-2">Q1-2.アプリの使い方を教えてください。</label>
+					<div class="content">
+						まずご希望のモードをお選びください。<br>
+						<img src="{{ url_for('static', filename='img/qanavi_img/how_to_use_1.png') }}" alt="モードを選ぶ。"
+							class="how_to_use_photo"><br>
+						次に学習したい単語を選択してください。<br>
+						<img src="{{ url_for('static', filename='img/qanavi_img/how_to_use_2.png') }}"
+							alt="テストしたい単語にチェックを入れる。" class="how_to_use_photo"><br>
+						<img src="{{ url_for('static', filename='img/qanavi_img/how_to_use_3.png') }}" alt="問題作成を押す。"
+							class="how_to_use_photo"><br>
+						単語を入力して答え合わせをしてください。<br>
+						<img src="{{ url_for('static', filename='img/qanavi_img/how_to_use_4.png') }}" alt="問題を解く。"
+							class="how_to_use_photo"><br>
+						より詳しいアプリの使い方を知りたい方は以下のリンクからご確認ください。<br>
+						<a href="{{ url_for('static', filename='pdf/how_to_use.pdf') }}" target="_blank"
+							rel="noopener noreferrer">詳しいアプリの使い方</a>
+					</div>
+				</div>
+				<!-- no1-3 -->
+				<div class="option">
+					<input type="checkbox" id="no1-3" class="toggle">
+					<label class="title no1_label" for="no1-3">Q1-3.◯◯練習、◯◯テストの違いは何ですか？</label>
+					<div class="content">
+						過去形練習および過去分詞形練習では、設定した単語を永遠と学習し続けるモードです。正解・不正解に関わらず学習を続けることができます。まだ学習が不十分で、ランダムにテストをしたい時におすすめなモードです。<br>
+						過去形テストおよび過去分詞形テストでは、設定した単語のテストができるモードです。一回で正解した単語が削除されます。全ての単語を一回で正解するとクリアです。単語を覚え、最後の確認をしたい時におすすめなモードです。
+					</div>
+				</div>
+				<!-- no1-4 -->
+				<div class="option">
+					<input type="checkbox" id="no1-4" class="toggle">
+					<label class="title no1_label" for="no1-4">Q1-4.アプリに出題される単語の一覧が知りたいです。</label>
+					<div class="content">
+						以下のURLからダウンロードできます。<br>
+						<a href="https://www.sukaisha.com/video_training_materials/teacher2/中学校英語講座/supplementaryfile/fukisoku.pdf"
+							target="_blank" rel="noopener noreferrer">単語一覧表</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="q_title">
+				Q2.アプリの不具合について
+			</div>
+			<div class="m-hdg Lv2">
+				<!-- no2-1 -->
+				<div class="option">
+					<input type="checkbox" id="no2-1" class="toggle">
+					<label class="title no2_label" for="no2-1">Q2-1.音声が聞こえません。</label>
+					<div class="content">
+						使用しているデバイスの音量がオンになっているか確認してください。
+					</div>
+				</div>
+				<!-- no2-2 -->
+				<div class="option">
+					<input type="checkbox" id="no2-2" class="toggle">
+					<label class="title no2_label" for="no2-2">Q2-2.英語の音声が片言になっています。</label>
+					<div class="content">
+						お使いのデバイスによっては正常に発音されない場合がございます。まずは「<a href="https://sukaisha.com/p_pp_test/voice"
+							target="_blank"
+							rel="noopener noreferrer">英語の音声確認</a>」ページで、正常に発音されるかご確認ください。このページで正常に発音されれば、単語テストのページでも正常に発音されます。それでも正常に発音されない場合は、申し訳ありませんが、お使いのデバイスでは正常に発音されません。他のデバイスをお使いになるか、発音機能なしでお使いください。なお、教室で貸し出しをしているiPadでは正常に発音されますので、ご希望の方は教室スタッフまでお声掛けください。
+					</div>
+				</div>
+			</div>
+
+			<div class="q_title">
+				Q3.その他のお問い合わせについて
+			</div>
+			<div class="m-hdg Lv3">
+				<!-- no3-1 -->
+				<div class="option">
+					<input type="checkbox" id="no3-1" class="toggle">
+					<label class="title no3_label" for="no3-1">Q3-1.教室の連絡先を教えて下さい。</label>
+					<div class="content">
+						-住所-<br>
+						〒115-0044<br>
+						東京都北区赤羽南1-3-7 セキネビル 3F<br>
+						-TEL-<br>
+						03-6903-8030<br>
+						-Mail-<br>
+						covez_akabaneminami@johnan.co.jp
+					</div>
+				</div>
+				<!-- no3-2 -->
+				<div class="option">
+					<input type="checkbox" id="no3-2" class="toggle">
+					<label class="title no3_label" for="no3-2">Q3-2.体験授業を受けてみたいです。</label>
+					<div class="content">
+						無料体験授業をご希望の方は、以下のリンクからお問い合わせいただくか、教室まで直接ご連絡ください。<br>
+						<a href="https://najb.f.msgs.jp/webapp/form/23673_najb_10/index.do?class=%E8%B5%A4%E7%BE%BD%E5%8D%97&_gl=1*1j5hs4s*_ga*MTczNzc0NDMwOS4xNjU3NzEyODU1*_ga_YD1Y5VRMTV*MTY2MDQxMjIyNC41LjAuMTY2MDQxMjIyNC4w&_ga=2.143693301.1119792711.1660412225-1737744309.1657712855"
+							target="_blank" rel="noopener noreferrer">
+							<img src="{{ url_for('static', filename='img/qanavi_img/inquiry_bnr_pc.jpg') }}"
+								alt="城南コベッツ赤羽南教室WEB問い合わせ" class="bnr_pc">
+							<img src="{{ url_for('static', filename='img/qanavi_img/inquiry_bnr_mobile.jpg') }}"
+								alt="城南コベッツ赤羽南教室WEB問い合わせ" class="bnr_mobile">
+						</a>
+					</div>
+				</div>
+				<!-- no3-3 -->
+				<div class="option">
+					<input type="checkbox" id="no3-3" class="toggle">
+					<label class="title no3_label" for="no3-3">Q3-3.アプリのソースコードについて知りたいです。</label>
+					<div class="content">
+						城南コベッツ赤羽南教室 副教室長までご連絡ください。
+					</div>
+				</div>
+				<!-- no3-4 -->
+				<div class="option">
+					<input type="checkbox" id="no3-4" class="toggle">
+					<label class="title no3_label" for="no3-4">Q3-4.他のアプリはありますか。</label>
+					<div class="content">
+						まずは<a href="https://sukaisha.com/links/" target="_blank"
+							rel="noopener noreferrer">こちらのサイト</a>をご覧いただき、ご希望のアプリが無いか確認してください。こちらに無いアプリをご希望の方は城南コベッツ赤羽南教室
+						副教室長までご相談ください。
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

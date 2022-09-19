@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>問題作成ページ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/create_questions.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/csv.js') }}"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/create_questions.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/round_btn.css') }}">
+	<meta id="test_type" content="{{ test_type }}">
+</head>
+
+<body>
+	<div class="header">
+		<div class="return_title">
+			<a href="/p_pp_test" role="button" class="round_btn"></a>
+		</div>
+		<br>
+		<div class="header_name">
+			問題作成画面
+		</div>
+	</div>
+
+	<form action="" name="question_form">
+		<div class="accordion">
+			<!-- no1 -->
+			<div class="option">
+				<input type="checkbox" id="no1" class="toggle">
+				<label class="title no1_label" for="no1">No.1</label>
+				<div class="content">
+					<label class="select_all_label">
+						<input type="checkbox" class="select_all_input" onclick="AllChecked(this)">
+						すべて選択
+					</label>
+				</div>
+			</div>
+			<!-- no2 -->
+			<div class="option">
+				<input type="checkbox" id="no2" class="toggle">
+				<label class="title no2_label" for="no2">No.2</label>
+				<div class="content">
+					<label class="select_all_label">
+						<input type="checkbox" class="select_all_input" onclick="AllChecked(this)">
+						すべて選択
+					</label>
+				</div>
+			</div>
+			<!-- no3 -->
+			<div class="option">
+				<input type="checkbox" id="no3" class="toggle">
+				<label class="title no3_label" for="no3">No.3</label>
+				<div class="content">
+					<label class="select_all_label">
+						<input type="checkbox" class="select_all_input" onclick="AllChecked(this)">
+						すべて選択
+					</label>
+				</div>
+			</div>
+			<!-- no4 -->
+			<div class="option">
+				<input type="checkbox" id="no4" class="toggle">
+				<label class="title no4_label" for="no4">No.4</label>
+				<div class="content">
+					<label class="select_all_label">
+						<input type="checkbox" class="select_all_input" onclick="AllChecked(this)">
+						すべて選択
+					</label>
+				</div>
+			</div>
+		</div>
+		<p id="submit_btn" class="msr_btn04" onclick="submit_form()">
+			<a>問題作成</a>
+		</p>
+	</form>
+</body>
+
+</html>

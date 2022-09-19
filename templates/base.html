@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block web_title %}
+        {% endblock %}
+    </title>
+    {% block meta_data %}
+    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/round_btn.css') }}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="return_title">
+            <a href="/p_pp_test" role="button" class="round_btn"></a>
+        </div>
+        <br>
+        <div class="question_name">
+            {% block p_or_pp %}
+            {% endblock %}
+        </div>
+    </div>
+    <div class="prototype">
+        <img src="{{ url_for('static', filename='img/sound_mark.png') }}" class="pronounce_button"
+            onclick="question_pronounce()" alt="発音を聞く">
+        <a>原形：</a>
+        <a id="prototype_verb"></a>
+    </div>
+    <div class="input_div">
+        <img id="correct_img" src="{{ url_for('static', filename='img/correct_mark.png') }}" alt="">
+        <img id="incorrect_img" src="{{ url_for('static', filename='img/incorrect_mark.png') }}" alt="">
+        <input type="text" id="answer" class="input_box" />
+        <input type="password" id="nisemono_answer" class="input_box" onInput="checkForm(this)" autocomplete="off" />
+        <br>
+        <p id="check" class="msr_btn04">
+            <a>答え合わせ</a>
+        </p>
+    </div>
+    <div class="collect_answer_div">
+        <div class="collect_answer" id="ca_div">
+            <img src="{{ url_for('static', filename='img/sound_mark.png') }}" class="pronounce_button"
+                onclick="answer_pronounce()" alt="発音を聞く">
+            <a>答え：</a>
+            <a id="collect_answer"></a>
+            <br>
+            <a>意味：</a>
+            <a id="meaning"></a>
+        </div>
+        <p id="next" class="msr_btn04">
+            <a>次の問題へ</a>
+        </p>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
+</body>
+
+</html>

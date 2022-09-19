@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block web_title %}
+過去形テスト
+{% endblock %}
+
+{% block meta_data %}
+<meta id="p_or_pp" content="p">
+<meta id="test_or_practice" content="test">
+{% for verb in v_list %}
+<meta class="q_list" content="{{ verb }}">
+{% endfor %}
+{% endblock %}
+
+{% block test_or_practice %}
+test
+{% endblock %}
+
+{% block p_or_pp %}
+過去形テスト
+{% endblock %}
