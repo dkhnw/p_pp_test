@@ -1,0 +1,55 @@
+body {
+	background-color: #F7F0DD;
+	margin: 0;
+	font-size: 4vw;
+	text-align: center;
+}
+
+.header {
+	background-color: #FFFFFF;
+	margin-bottom: 0.3vh;
+	box-shadow: 0 0.3vh 0px 0 #D3CBC1;
+	padding: 2vh;
+	font-size: 2vw;
+}
+
+.return_title {
+	position: absolute;
+	left: 0;
+	z-index: 2;
+}
+
+.header_name {
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	color: #1495C4;
+}
+
+input {
+	width: 30vw;
+	font-size: 4vw;
+	text-align: center;
+	margin: 5vh;
+}
+
+.msr_btn04 {
+	display: inline-block;
+	margin: 0;
+}
+
+/* ウインドウ幅が500px以下のとき */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+	body {
+		font-size: 30px;
+	}
+
+	.header {
+		font-size: 20px;
+	}
+
+	input {
+		width: 180px;
+		font-size: 30px;
+	}
+}

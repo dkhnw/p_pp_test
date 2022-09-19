@@ -1,0 +1,47 @@
+.msr_btn04 a {
+    background-color: #FFFFFF;
+    border: 0.3vmin solid #1B73BA;
+    border-radius: 0.5vmin;
+    box-sizing: border-box;
+    color: #1B73BA;
+    display: block;
+    font-size: 6vmin;
+    padding: 13px 20px 13px 50px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    width: auto;
+  }
+
+  /* 青の三角形 */
+  .msr_btn04 a:before {
+    border: 1.5vmin solid transparent;
+    border-left: 1.5vmin solid #1B73BA;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 12px;
+    left: 15px;
+    margin:-6px 0 0;
+    position: absolute;
+    top: 50%;
+    transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    vertical-align: middle;
+    width: 6px;
+  }
+
+  /* マウスオーバー */
+  .msr_btn04 a:hover {
+    color: #FFFFFF;
+    background:#1B73BA;
+  }
+  .msr_btn04 a:hover:before {
+    border-left: 1.5vmin solid #FFFFFF;
+  }

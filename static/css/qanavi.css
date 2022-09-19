@@ -1,0 +1,229 @@
+body {
+	background-color: #f7f1dd;
+	margin: 0;
+	font-size: 3vw;
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+.header {
+	background-color: #FFFFFF;
+	margin-bottom: 0.3vh;
+	box-shadow: 0 0.3vh 0px 0 #D3CBC1;
+	padding: 2vh;
+	font-size: 2vw;
+}
+
+.return_title {
+	position: absolute;
+	left: 0;
+	z-index: 2;
+}
+
+.header_name {
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	color: #1495C4;
+}
+
+.accordion {
+	margin: 1em auto;
+	max-width: 90vw;
+}
+
+.toggle {
+	display: none;
+}
+
+.option {
+	position: relative;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.title,
+.content {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	/* 戻るときの時間 */
+	transition: all 1.0s;
+}
+
+.title {
+	border: solid 2px black;
+	padding: 0.5em;
+	display: block;
+	color: white;
+	font-weight: bold;
+}
+
+.title::after,
+.title::before {
+	content: "";
+	position: absolute;
+	right: 1.25em;
+	top: 0.85em;
+	width: 2px;
+	height: 0.75em;
+	background-color: black;
+	transition: all 0.3s;
+}
+
+.title::after {
+	transform: rotate(90deg);
+}
+
+.content {
+	max-height: 0;
+	overflow: hidden;
+}
+
+.content p {
+	margin: 0;
+	padding: 0.5em 1em 1em;
+	font-size: 0.9em;
+	line-height: 1.5;
+}
+
+.toggle:checked+.title+.content {
+	max-height: 100px;
+	/* max-height: inherit; */
+	/* 開くときの時間 */
+	transition: all 1.0s;
+}
+
+.toggle:checked+.title::before {
+	transform: rotate(90deg) !important;
+}
+
+.no1_label {
+	background-color: #cf675a;
+}
+
+.no2_label {
+	background-color: #a1bb00;
+}
+
+.no3_label {
+	background-color: #f38d2b;
+}
+
+.no4_label {
+	background-color: #245aa0;
+}
+
+
+.lesson {
+	background-color: red;
+}
+
+.content {
+	margin-left: 1rem;
+}
+
+.section_label,
+.select_all_label {
+	display: block;
+	padding: 1rem;
+}
+
+.section_label {
+	margin-left: 2vw;
+}
+
+.section_input,
+.select_all_input {
+	width: 2em;
+	height: 2em;
+	margin: 0 1vw 0 0;
+}
+
+.test {
+	width: 2em;
+	height: 2em;
+	margin: 0 1vw 0 0;
+}
+
+.msr_btn04 {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+
+.q_title {
+	font-size: 4vw;
+}
+
+.m-hdg {
+	margin: 0.1em 0 1.25em;
+	padding: 0.1em 0 0;
+	position: relative;
+	border-top: 3px solid #ced1d9;
+}
+
+.m-hdg::before {
+	width: 10vw;
+	height: 3px;
+	position: absolute;
+	top: -3px;
+	left: 0;
+	content: '';
+}
+
+.Lv1::before {
+	background: #cf675a;
+}
+
+.Lv2::before {
+	background: #a1bb00;
+}
+
+.Lv3::before {
+	background: #f38d2b;
+}
+
+.content {
+	font-size: 0.85em;
+	text-align: justify;
+}
+
+.how_to_use_photo {
+	max-height: 70vh;
+	max-width: 100%;
+	border: solid 3px rgb(234, 132, 0);
+}
+
+.bnr_pc {
+	width: 100%;
+	display: block !important;
+}
+
+.bnr_mobile {
+	width: 100%;
+	display: none !important;
+}
+
+/* ウインドウ幅が500px以下のとき */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+	body {
+		font-size: 3.35vw;
+	}
+
+	.header {
+		font-size: 20px;
+	}
+
+	.option {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	.bnr_pc {
+		display: none !important;
+	}
+
+	.bnr_mobile {
+		display: block !important;
+	}
+}

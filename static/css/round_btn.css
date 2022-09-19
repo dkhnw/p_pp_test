@@ -1,0 +1,43 @@
+.round_btn {
+  margin-left: 1vw;
+  display: block;
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  border: 0.5vw solid #1495C4; /* 枠の調整 */
+  border-radius: 50%;  /* 丸みの度合い */
+  background: #fff; /* ボタンの背景色 */
+}
+
+.round_btn::before, .round_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5vw; /* 棒の幅（太さ） */
+  height: 2vw; /* 棒の高さ */
+  background: #1495C4; /* バツ印の色 */
+}
+
+.round_btn::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.round_btn::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+/* ウインドウ幅が500px以下のとき */
+@media (max-width : 500px) {
+  .round_btn {
+    margin-left: 10pt;
+    width: 20pt;
+    height: 20pt;
+    border: 2pt solid #1495C4; /* 枠の調整 */
+  }
+
+  .round_btn::before, .round_btn::after {
+    width: 2.5pt; /* 棒の幅（太さ） */
+    height: 15pt; /* 棒の高さ */
+  }
+}

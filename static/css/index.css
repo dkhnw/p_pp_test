@@ -1,0 +1,46 @@
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    font-size: 4vw;
+    font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+.header {
+    padding: 2vh;
+}
+
+.school_logo {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.school_name {
+    font-size: 4vw;
+    margin-block-start: 0pt;
+    color: #64ac34;
+    text-align: center;
+    font-weight: bold;
+    margin: 0%;
+}
+
+.link_list {
+    width: 95%;
+    margin: auto;
+}
+
+.msr_btn04 {
+    padding: 2vh;
+    margin: 0%;
+}
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .school_logo {
+        width: 60%;
+    }
+
+    .school_name {
+        font-size: 9vw;
+    }
+}

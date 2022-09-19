@@ -1,0 +1,126 @@
+body {
+    background-color: #F7F0DD;
+    margin: 0;
+    font-size: 4vw;
+    font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+.header {
+    background-color: #FFFFFF;
+    margin-bottom: 0.3vh;
+    box-shadow: 0 0.3vh 0px 0 #D3CBC1;
+    padding: 2vh;
+    font-size: 2vw;
+}
+
+
+.return_title {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+
+.question_name {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    color: #1495C4;
+}
+
+.prototype {
+    background-color: #B1916B;
+    color: #fffefb;
+    font-weight: bold;
+    text-align: center;
+    padding: 2vh;
+    margin-bottom: 0.4vh;
+    box-shadow: 0 0.4vh 0px 0 #998061
+}
+
+.input_div,
+.collect_answer_div,
+.check_div {
+    text-align: center;
+}
+
+.input_div {
+    position: relative;
+}
+
+#correct_img,
+#incorrect_img {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50vmin;
+    height: 50vmin;
+    z-index: -1;
+}
+
+.input_box {
+    width: 30vw;
+    font-size: 4vw;
+    text-align: center;
+    margin: 5vh;
+}
+
+#answer {
+    position: relative;
+}
+
+#nisemono_answer {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.btn {
+    font-size: 6vmin;
+}
+
+.msr_btn04 {
+    display: inline-block;
+    margin: 0;
+}
+
+.collect_answer {
+    margin: 1vh;
+    font-weight: bold;
+    color: #FD6179;
+    text-shadow: 2px 0 10px white;
+}
+
+#next,
+#ca_div {
+    visibility: hidden;
+}
+
+.pronounce_button {
+    width: 3vw;
+    height: auto;
+}
+
+/* ウインドウ幅が500px以下のとき */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    body {
+        font-size: 30px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .input_box {
+        width: 180px;
+        font-size: 30px;
+    }
+
+    .pronounce_button {
+        width: 27px;
+    }
+}
